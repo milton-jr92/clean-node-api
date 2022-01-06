@@ -98,7 +98,7 @@ describe('DbAddAccount Usecase', () => {
   })
 
   test('Should reutn an account on success', async () => {
-    const { sut } = makeSut()    
+    const { sut } = makeSut()
     const accountData = {
       name: 'valid_name',
       email: 'valid_email',
