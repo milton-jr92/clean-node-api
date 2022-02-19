@@ -6,9 +6,3 @@ export default (router: Router): void => {
   // eslint-disable-next-line @typescript-eslint/no-misused-promises
   router.post('/signup', adaptRoute(makeSignUpController()))
 }
-
-/* export default (router: Router): void => {
-  router.post('/signup', (req, res) => {
-    res.json({ ok: 'ok' })
-  })
-} */
