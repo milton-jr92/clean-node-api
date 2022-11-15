@@ -3,3 +3,4 @@ dist
 coverage
 DS_*
 src/.DS_Store
+globalConfig.json
