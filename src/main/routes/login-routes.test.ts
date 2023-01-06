@@ -1,8 +1,8 @@
 import request from 'supertest'
-import { hash } from 'bcrypt'
-import { Collection } from 'mongodb'
-import { MongoHelper } from '../../infra/db/mongodb/helpers/mongo-helper'
 import app from '../config/app'
+import { MongoHelper } from '../../infra/db/mongodb/helpers/mongo-helper'
+import { Collection } from 'mongodb'
+import { hash } from 'bcrypt'
 
 let accountCollection: Collection
 
@@ -49,6 +49,16 @@ describe('SignUp Routes', () => {
           password: '123'
         })
         .expect(200)
+    })
+
+    test('Should return 401 on login failure', async () => {
+      await request(app)
+        .post('/api/login')
+        .send({
+          email: 'milton.jr92@gmail.com',
+          password: '123'
+        })
+        .expect(401)
     })
   })
 })
