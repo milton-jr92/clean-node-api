@@ -1,6 +1,8 @@
 node_modules
 dist
 coverage
+data
 DS_*
 src/.DS_Store
 globalConfig.json
+.vscode
